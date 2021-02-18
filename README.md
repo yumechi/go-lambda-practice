@@ -43,3 +43,22 @@ docker build -f ./build/package/Dockerfile -t hello-world-lambda .
 あとは tag を打って ECR に push する（ドキュメント参照）
 
 lambda との紐づけ方もドキュメント参照
+
+## 参考
+
+* ディレクトリ構成
+  * [golang-standards/project-layout： Standard Go Project Layout](https://github.com/golang-standards/project-layout)
+  * [Goにはディレクトリ構成のスタンダードがあるらしい。 - Qiita](https://qiita.com/sueken/items/87093e5941bfbc09bea8)
+* gofmtの設定
+  * [i++](http://increment.hatenablog.com/?page=1461757090)
+  * [Goで開発を始める前に絶対に読んでほしいGolandの設定3選 - Qiita](https://qiita.com/tez/items/417c72a275fd1399645e#pre-commit%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB)
+  * [misc/git/pre-commit - go - Git at Google](https://go.googlesource.com/go/+/dev.tls/misc/git/pre-commit)
+* エラー回り
+  * [standard_init_linux.go：211： exec user process caused "no such file or directory" の直し方 - Qiita](https://qiita.com/kabik/items/5591f62c0ef6ddef5db2)
+    * 記載通り entry.sh が CRLF で保存されていた（がっくり）
+* 環境変数
+  * [Docker で環境変数をホストからコンテナに渡す方法（ホスト OS 側からゲスト OS に渡す方法各種） - Qiita](https://qiita.com/KEINOS/items/518610bc2fdf5999acf2)
+    * 一応見ただけ
+    * rie なしで run すると AWS のもろもろの環境変数がないといわれてエラーになるので調べていた
+* lambdaに関して
+  * [AWS Lambda の新機能 – コンテナイメージのサポート | Amazon Web Services ブログ](https://aws.amazon.com/jp/blogs/news/new-for-aws-lambda-container-image-support/)
