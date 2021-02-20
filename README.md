@@ -34,10 +34,10 @@ docker run -p 9000:8080 hello-world-lambda:latest /main
 
 この状態で例の curl コマンド（ドキュメント参照）を打つと動くはず
 
-デプロイ
+デプロイ用の Dockerfile は分けることにした。
 
 ```shell
-docker build -f ./build/package/Dockerfile -t hello-world-lambda .
+docker build -f ./build/production/Dockerfile -t hello-world-lambda .
 ```
 
 あとは tag を打って ECR に push する（ドキュメント参照）
