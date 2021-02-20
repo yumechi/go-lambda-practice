@@ -28,7 +28,7 @@ https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/go-image.html
 ローカルで動かす
 
 ```shell
-docker build -f ./build/development/Dockerfile -t hello-world-lambda .
+docker build -f ./build/development/Dockerfile -t hello-world-lambda-local .
 docker run -p 9000:8080 hello-world-lambda:latest /main
 ```
 
